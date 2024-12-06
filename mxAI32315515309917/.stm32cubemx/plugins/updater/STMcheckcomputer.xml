@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<Computer DBVersion="2.0">
+    <Software>
+        <PackDescription Release="MX.6.12.1"/>
+    </Software>
+    <DataBase>
+        <PackDescription Release="DB.6.0.121"/>
+    </DataBase>
+    <DataBase>
+        <PackDescription Release="DB.6.0.92"/>
+    </DataBase>
+    <DataBase>
+        <PackDescription Release="DB.6.0.50"/>
+    </DataBase>
+    <Firmware>
+        <PackDescription InstallPath="/Users/killian/STM32Cube/Repository/STM32Cube_FW_L0_V1.12.2" Patch="FW.L0.1.12.2" Release="FW.L0.1.12.0">
+            <Note Patch="ReleaseNotes_Patch.html" Release="ReleaseNotes.html"/>
+        </PackDescription>
+    </Firmware>
+    <Firmware>
+        <PackDescription InstallPath="/Users/killian/STM32Cube/Repository/STM32Cube_FW_F7_V1.17.2" Patch="FW.F7.1.17.2" Release="FW.F7.1.17.0">
+            <Note Patch="ReleaseNotes_Patch.html" Release="ReleaseNotes.html"/>
+        </PackDescription>
+    </Firmware>
+    <ThirdParty Name="X-CUBE-TOUCHGFX" Vendor="STMicroelectronics">
+        <ShortDescription>TouchGFX Generator</ShortDescription>
+        <PackDescription InstallPath="/Users/killian/STM32Cube/Repository/Packs/STMicroelectronics/X-CUBE-TOUCHGFX/4.24.1" Release="4.24.1" ReleaseUrl="http://sw-center.st.com/packs/x-cube/STMicroelectronics.X-CUBE-TOUCHGFX.4.24.1.pack" Status="New">
+            <Note Release="&#10;Release information :&#10;&#10;      TouchGFX Generator V4.24.1&#10;&#10;      New Features:&#10;&#10;      Bugfixes:&#10;&#10;      Improvements:&#10;&#10;    "/>
+        </PackDescription>
+    </ThirdParty>
+    <ThirdParty Name="X-CUBE-AI" Vendor="STMicroelectronics">
+        <ShortDescription>Artificial Intelligence</ShortDescription>
+        <PackDescription InstallPath="/Users/killian/STM32Cube/Repository/Packs/STMicroelectronics/X-CUBE-AI/8.1.0" Release="8.1.0" ReleaseUrl="http://sw-center.st.com/packs/x-cube/STMicroelectronics.X-CUBE-AI.8.1.0.pack" Status="New">
+            <Note Release="&#10;Release information :&#10;&#10;Artificial Intelligence Pack version 8.1.0 for STM32 Cortex M7, M4, M0 and M33 MCUs&#10;What's new in this release:&#10;  - Support of Mac arm64 architecture&#10;  - Performance improvements of the embedded inference library &#10;  - TensorFlow 2.12 and Keras.io 2.12&#10;  - updated Tensorflow Lite for Micro (2023-05-03 snapshot)&#10;  - ONNX Runtime 1.13.1&#10;&#9;&#9;"/>
+        </PackDescription>
+    </ThirdParty>
+</Computer>

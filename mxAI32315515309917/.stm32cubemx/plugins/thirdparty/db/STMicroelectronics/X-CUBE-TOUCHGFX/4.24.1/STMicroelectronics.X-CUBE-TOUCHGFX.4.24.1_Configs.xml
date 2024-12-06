@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" CodeTemplate="app_touchgfx_h.ftl;app_touchgfx_c.ftl" DBVersion="V4.0" Name="X-CUBE-TOUCHGFX" RootFolder="Packs/STMicroelectronics/X-CUBE-TOUCHGFX/4.24.1/" Version="4.24.1" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/thirdPartyDb.xsd">
+    <RefConfig Name="GraphicsJjApplication">
+        <!-- Method for pre OS initialization functions. It is generated when ThreadX is used -->
+        <CallLibMethod Name="MX_TouchGFX_PreOSInit" ReturnHAL="false" Phase="preOS"/>
+
+        <Component Name="ApplicationCcGraphics:Application:TouchGFX:$ApplicationCcGraphicsJjApplication"/>
+        <Component Name="HAL::OTM:$USE_OTM8009A"/>
+        <Component Name="Middleware:TouchGFX:os:"/>
+        <Component Name="Middleware:TouchGFX:lib:"/>
+        <Component Name="Middleware:TouchGFX:framework:"/>
+        <Component Name="Generated"/>
+        <ConfigFile Name="app_touchgfx_h"/>
+        <ConfigFile Name="app_touchgfx_c"/>
+
+        <ConfigFile Name="TOUCHGFX_PART"/>
+        <ConfigFile Name="TouchGFXConfiguration_CPP"/>
+        <ConfigFile Name="STM32TouchController_CPP"/>
+        <ConfigFile Name="STM32TouchController_HPP"/>
+        <ConfigFile Name="DMA_CPP"/>
+        <ConfigFile Name="DMA_HPP"/>
+
+        <ConfigFile Name="otm8009a_480x800_H"/>
+        <ConfigFile Name="application_touchgfx"/>
+        <ConfigFile Name="OSWRAPPERS_CPP"/>
+        <ConfigFile Name="STM32Instrumentation_HPP"/>
+        <ConfigFile Name="STM32Instrumentation_CPP"/>
+        <ConfigFile Name="GPIO_CPP"/>
+        <ConfigFile Name="NEMA_HAL_C"/>
+
+<!-- HAL  -->
+        <ConfigFile Name="GENERATEDHAL_CPP"/>
+        <ConfigFile Name="USERHAL_HPP"/>
+        <ConfigFile Name="GENERATEDHAL_HPP"/>
+        <ConfigFile Name="GENERATEDHAL_CPP"/>
+        <ConfigFile Name="USERHAL_CPP"/>
+        <ConfigFile Name="DATAREADER_HPP"/>
+        <ConfigFile Name="DATAREADER_CPP"/>
+        <ConfigFile Name="USER_DATAREADER_HPP"/>
+        <ConfigFile Name="USER_DATAREADER_CPP"/>
+
+<!-- VIDEO -->
+        <ConfigFile Name="MJPEGDECODER_HPP"/>
+        <ConfigFile Name="DIRECTFRAMEBUFFERVIDEOCONTROLLER_HPP"/>
+        <ConfigFile Name="DEDICATEDVIDEOCONTROLLER_HPP"/>
+        <ConfigFile Name="DOUBLEBUFFEREDVIDEOCONTROLLER_HPP"/>
+        <ConfigFile Name="SOFTWAREMJPEGDECODER_HPP"/>
+        <ConfigFile Name="SOFTWAREMJPEGDECODER_CPP"/>
+        <ConfigFile Name="HARDWAREMJPEGDECODER_HPP"/>
+        <ConfigFile Name="HARDWAREMJPEGDECODER_CPP"/>
+        <ConfigFile Name="TGFX_JPEG_UTILS_C"/>
+
+<!-- tmp generated files -->
+        <ConfigFile Name="RTOS_DEFINES_X_CUBE_TouchGFX"/>
+        <ConfigFile Name="RTOS_VARIABLES_X_CUBE_TouchGFX"/>
+        <ConfigFile Name="RTOS_POOL_CREATE_X_CUBE_TouchGFX"/>
+        <ConfigFile Name="FMC_INTERFACE_API"/>     <!-- new tmp generated now for the FMC display interface's APIs -->
+        <ConfigFile Name="LCD8BPP_CLUT"/>    <!-- new tmp generated now for LCD8bpp CLUT -->
+        <ConfigFile Name="DMAXRGB2222"/>    <!-- tmp generated for DMAXRGB2222 -->
+        <ConfigFile Name="DMA2DRGB565"/>    <!-- tmp generated for DMA2DRGB565 -->
+        <ConfigFile Name="DMA2DRGB888"/>    <!-- tmp generated for DMA2DRGB888 -->
+        <ConfigFile Name="DMA2DARGB8888"/>  <!-- tmp generated for DMA2DARGB8888 -->
+        <ConfigFile Name="DMA2D_PAINT_COMMON"/>  <!-- tmp generated for DMA2D_PAINT_COMMON -->
+        <ConfigFile Name="DMA2D_PAINT_RGB565"/>  <!-- tmp generated for DMA2D_PAINT_RGB565 -->
+        <ConfigFile Name="DMA2D_PAINT_RGB888"/>  <!-- tmp generated for DMA2D_PAINT_RGB888 -->
+        <ConfigFile Name="DMA2D_PAINT_ARGB8888"/>  <!-- tmp generated for DMA2D_PAINT_ARGB8888 -->
+        <ConfigFile Name="INVALIDATECLEANCACHE"/>  <!-- tmp generated for INVALIDATECLEANCACHE -->
+		<ConfigFile Name="INVALIDATECACHE"/>
+		<ConfigFile Name="OSWRAPPERS_NOOS"/>  <!-- tmp generated for OSWRAPPERS_NOOS -->
+        <ConfigFile Name="OSWRAPPERS_CMSIS"/>  <!-- tmp generated for OSWRAPPERS_CMSIS -->
+        <ConfigFile Name="OSWRAPPERS_THREADX"/>  <!-- tmp generated for OSWRAPPERS_THREADX -->
+        <ConfigFile Name="OSWRAPPERS_CUSTOM"/>  <!-- tmp generated for OSWRAPPERS_CUSTOM -->
+		<ConfigFile Name="TGFX_LICENSE"/>  <!-- tmp generated for TGFX_LICENCE -->
+		<ConfigFile Name="TGFX_GEN_LICENCE"/>  <!-- tmp generated for TGFX_LICENCE -->
+    </RefConfig>
+
+    <!-- Method for pre OS initialization functions. It is generated when ThreadX is used -->
+    <LibMethod Comment="" Name="MX_TouchGFX_PreOSInit" Optimizable="true"/>
+
+    <RefConfigFile Name="RTE_Component" Template="RTE_Components.ftl">
+        <File Category="header" Condition="all" Name="./RTE_Components.h"/>
+    </RefConfigFile>
+    <RefComponent Cclass="ApplicationCcGraphics" Cgroup="Application" Cversion="4Gg19Gg0">
+        <SubComponent Csub="" Cvariant="TouchGFX Generator:TouchGFX Generator" ModuleName="TouchGFX">
+            <File Category="doc" Condition="" Name="./dummy.txt"/>
+        </SubComponent>
+    </RefComponent>
+
+    <RefConfigFile Description="Application template for TouchGFX" Name="app_touchgfx_h" Template="app_touchgfx_h.ftl" destinationFolder="TouchGFX/App">
+        <File Category="header" Condition="all" Name="./app_touchgfx.h" Version="4.24.1"/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="Application template for TouchGFX" Name="app_touchgfx_c" Template="app_touchgfx_c.ftl" destinationFolder="TouchGFX/App">
+        <File Category="source" Condition="all" Name="./app_touchgfx.c" Version="4.24.1"/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_tx_mem_allocation_method" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_app_mem_pool_size" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_app_stack_size" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="TOUCHGFX_PART" Template="ApplicationTemplate.ftl">
+        <File Category="source" Condition="all" Name="ApplicationTemplate.touchgfx.part" Version="4.24.1"/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_vector_rendering" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_vector_fonts" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_video" GenericType="simple" Comment="" />
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="TouchGFXConfiguration_CPP" Template="TouchGFXConfiguration_cpp.ftl">
+        <File Category="source" Condition="all" Name="target/generated/TouchGFXConfiguration.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_hardware_accelerator" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_buffering_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_vector_rendering" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_vector_fonts" GenericType="simple" Comment="" />
+    </RefConfigFile>
+
+<!-- Generated files -->
+    <!-- File with definition of the ThreadX memory pool size -->
+    <RefConfigFile Name="RTOS_DEFINES_X_CUBE_TouchGFX" Description="File with definition of the ThreadX memory pool size" Template="app/RTOS_defines_X-CUBE-TouchGFX.ftl">
+        <File Name="RTOS_defines_X-CUBE-TouchGFX.tmp" Category="header" Version="" Condition="(oswrapper_threadx &amp; sem_tx_static_memory_allocation)" />
+        <Argument Name="tgfx_app_mem_pool_size" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <!-- File with the ThreadX memory pool declaration -->
+    <RefConfigFile Name="RTOS_VARIABLES_X_CUBE_TouchGFX" Description="File with the ThreadX memory pool declaration" Template="app/RTOS_variables_X-CUBE-TouchGFX.ftl">
+        <File Name="RTOS_variables_X-CUBE-TouchGFX.tmp" Category="header" Version="" Condition="(oswrapper_threadx &amp; sem_tx_static_memory_allocation)" />
+    </RefConfigFile>
+    <!-- File with the call to the ThreadX memory pool creation -->
+    <RefConfigFile Name="RTOS_POOL_CREATE_X_CUBE_TouchGFX" Description="File with the call to the ThreadX memory pool creation" Template="app/RTOS_pool_create_X-CUBE-TouchGFX.ftl">
+        <File Name="RTOS_pool_create_X-CUBE-TouchGFX.tmp" Category="header" Version="" Condition="(oswrapper_threadx &amp; sem_tx_static_memory_allocation)" />
+    </RefConfigFile>
+
+<!-- HAL -->
+    <RefConfigFile Description="" Name="GENERATEDHAL_HPP" Template="TouchGFXGeneratedHAL_hpp.ftl">
+        <File Category="header" Condition="all" Name="target/generated/TouchGFXGeneratedHAL.hpp" Version="4.24.1"/>
+        <Argument Name="tgfx_buffering_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_strategy" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+<!-- Generated HAL CPP -->
+    <RefConfigFile Description="" Name="GENERATEDHAL_CPP" Template="TouchGFXGeneratedHAL_cpp.ftl">
+        <File Category="source" Condition="all" Name="target/generated/TouchGFXGeneratedHAL.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_buffering_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_block_size" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_number_of_blocks" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_vsync" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_location" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_framebuffer_stride" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_framebuffer_stride_value" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_address1" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_address2" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_hardware_accelerator" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_partialfb_transmit_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_buffer_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_streams" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_width" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_video_height" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_vector_rendering" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_cl_size" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="USERHAL_HPP" Template="TouchGFXHAL_hpp.ftl">
+        <File Category="header" Condition="all" Name="target/TouchGFXHAL.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="USERHAL_CPP" Template="TouchGFXHAL_cpp.ftl">
+        <File Category="source" Condition="all" Name="target/TouchGFXHAL.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_buffering_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_partialfb_transmit_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_framebuffer_stride" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_framebuffer_stride_value" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+<!-- Touch -->
+    <RefConfigFile Description="" Name="STM32TouchController_HPP" Template="STM32TouchController_hpp.ftl">
+        <File Category="header" Condition="all" Name="target/STM32TouchController.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="STM32TouchController_CPP" Template="STM32TouchController_cpp.ftl">
+        <File Category="source" Condition="all" Name="target/STM32TouchController.cpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+<!-- DMA -->
+    <RefConfigFile Description="" Name="DMA_HPP" Template="dma2d/STM32DMA_hpp.ftl">
+        <File Category="header" Condition="sem_dma2d_selected" Name="target/generated/STM32DMA.hpp" Version="4.24.1"/>
+        <Argument Name="tgfx_video" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_strategy" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="DMA_CPP" Template="dma2d/STM32DMA_cpp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected" Name="target/generated/STM32DMA.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_strategy" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA_HPP" Template="dma2d/STM32NoDMA_hpp.ftl">
+        <File Category="header" Condition="sem_nodma_selected" Name="target/generated/STM32DMA.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="DMA_CPP" Template="dma2d/STM32NoDMA_cpp.ftl">
+        <File Category="source" Condition="sem_nodma_selected" Name="target/generated/STM32DMA.cpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA_HPP" Template="dma2d/TouchGFXDMA_hpp.ftl">
+        <File Category="header" Condition="sem_custom_dma_selected" Name="target/TouchGFXDMA.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="DMA_CPP" Template="dma2d/TouchGFXDMA_cpp.ftl">
+        <File Category="source" Condition="sem_custom_dma_selected" Name="target/TouchGFXDMA.cpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+<!-- Data Reader -->
+    <RefConfigFile Description="" Name="DATAREADER_HPP" Template="datareader/TouchGFXGeneratedDataReader_hpp.ftl">
+        <File Category="header" Condition="sem_datareader_enabled" Name="target/generated/TouchGFXGeneratedDataReader.hpp" Version="4.24.1"/>
+        <Argument Name="tgfx_datareader_block_size" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="DATAREADER_CPP" Template="datareader/TouchGFXGeneratedDataReader_cpp.ftl">
+        <File Category="source" Condition="sem_datareader_enabled" Name="target/generated/TouchGFXGeneratedDataReader.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_datareader_mem_base_address" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader_mem_size" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader_dma_transfersize" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_datareader_block_size" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="USER_DATAREADER_HPP" Template="datareader/TouchGFXDataReader_hpp.ftl">
+        <File Category="header" Condition="sem_datareader_enabled" Name="target/TouchGFXDataReader.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="USER_DATAREADER_CPP" Template="datareader/TouchGFXDataReader_cpp.ftl">
+        <File Category="source" Condition="sem_datareader_enabled" Name="target/TouchGFXDataReader.cpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+<!-- OS Wrappers -->
+    <RefConfigFile Description="" Name="OSWRAPPERS_CPP" Template="OSWrappers_cpp.ftl">
+        <File Category="source" Condition="oswrapper_custom" Name="target/OSWrappers.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+<!-- OS Wrappers -->
+    <RefConfigFile Description="" Name="OSWRAPPERS_CPP" Template="OSWrappers_cpp.ftl">
+        <File Category="source" Condition="oswrapper_cmsis|oswrapper_threadx|oswrapper_noos" Name="target/generated/OSWrappers.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+<!-- GPIO -->
+    <RefConfigFile Description="" Name="GPIO_CPP" Template="TouchGFXGPIO_cpp.ftl">
+        <File Category="source" Condition="all" Name="target/TouchGFXGPIO.cpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+<!-- VIDEO -->
+    <!-- General mjpeg decoder interface. Always include if video is enabled -->
+    <RefConfigFile Description="" Name="MJPEGDECODER_HPP" Template="mjpeg/MJPEGDecoder_hpp.ftl">
+        <File Category="source" Condition="sem_video_sw_enabled | sem_video_hw_enabled" Name="target/generated/MJPEGDecoder.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <!-- strategies. Should we just have a single file for all strategies? Makes it easier to maintain. E.g. VideoController, with content depending on user selection (but lots of comments of course). -->
+    <!-- Then the main videocontroller.ftl can include the other substrategies based on user selection-->
+    <RefConfigFile Description="" Name="DIRECTFRAMEBUFFERVIDEOCONTROLLER_HPP" Template="mjpeg/DirectFrameBufferVideoController_hpp.ftl">
+        <File Category="source" Condition="sem_video_direct" Name="target/generated/DirectFrameBufferVideoController.hpp" Version="4.24.1"/>
+        <Argument Name="tgfx_video" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DEDICATEDVIDEOCONTROLLER_HPP" Template="mjpeg/DedicatedBufferVideoController_hpp.ftl">
+        <File Category="source" Condition="sem_video_onebuffer | sem_video_hw_enabled" Name="target/generated/DedicatedBufferVideoController.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DOUBLEBUFFEREDVIDEOCONTROLLER_HPP" Template="mjpeg/DoubleBufferedVideoController_hpp.ftl">
+        <File Category="source" Condition="sem_video_twobuffers" Name="target/generated/DoubleBufferedVideoController.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <!-- DECODERS -->
+
+    <!-- Software MJPEG Decoder -->
+    <RefConfigFile Description="" Name="SOFTWAREMJPEGDECODER_CPP" Template="mjpeg/SoftwareMJPEGDecoder_cpp.ftl">
+        <File Category="source" Condition="sem_video_sw_enabled" Name="target/generated/SoftwareMJPEGDecoder.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_buffer_format" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="SOFTWAREMJPEGDECODER_HPP" Template="mjpeg/SoftwareMJPEGDecoder_hpp.ftl">
+        <File Category="source" Condition="sem_video_sw_enabled" Name="target/generated/SoftwareMJPEGDecoder.hpp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <!-- Hardware MJPEG Decoder -->
+    <RefConfigFile Description="" Name="HARDWAREMJPEGDECODER_HPP" Template="mjpeg/HardwareMJPEGDecoder_hpp.ftl">
+        <File Category="source" Condition="sem_video_hw_enabled" Name="target/generated/HardwareMJPEGDecoder.hpp" Version="4.24.1"/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="HARDWAREMJPEGDECODER_CPP" Template="mjpeg/HardwareMJPEGDecoder_cpp.ftl">
+        <File Category="source" Condition="sem_video_hw_enabled" Name="target/generated/HardwareMJPEGDecoder.cpp" Version="4.24.1"/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_video_width" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_video_strategy" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="TGFX_JPEG_UTILS_C" Template="mjpeg/tgfx_jpeg_utils_c.ftl">
+        <File Category="source" Condition="(sem_video_hw_enabled &amp; STM32F7)" Name="target/generated/tgfx_jpeg_utils.c" Version="4.24.1"/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/> <!-- tgfx_video_buffer_format.split.last.number -->
+        <Argument Name="tgfx_video_width" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_video_height" GenericType="simple" Comment="" />
+    </RefConfigFile>
+
+    <!-- nema hal os wrappers -->
+    <RefConfigFile Description="" Name="NEMA_HAL_C" Template="gpu2d/nema_hal_noos_c.ftl">
+        <File Category="source" Condition="sem_gpu2d_enabled &amp; oswrapper_noos" Name="target/generated/nema_hal.c" Version="4.24.1"/>
+        <Argument Name="tgfx_nema_cl_size" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_location" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_address" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_vector_rendering" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_height" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="NEMA_HAL_C" Template="gpu2d/nema_hal_threadx_c.ftl">
+        <File Category="source" Condition="sem_gpu2d_enabled &amp; oswrapper_threadx" Name="target/generated/nema_hal.c" Version="4.24.1"/>
+        <Argument Name="tgfx_nema_cl_size" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_location" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_address" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_vector_rendering" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_height" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="NEMA_HAL_C" Template="gpu2d/nema_hal_cmsis_c.ftl">
+        <File Category="source" Condition="sem_gpu2d_enabled &amp; oswrapper_cmsis" Name="target/generated/nema_hal.c" Version="4.24.1"/>
+        <Argument Name="tgfx_nema_cl_size" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_location" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_nema_address" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_vector_rendering" GenericType="simple" Comment="" />
+        <Argument Name="tgfx_display_interface" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_custom_height" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_width" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_ltdc_height" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <!-- tmp generated files -->
+    <RefConfigFile Description="" Name="FMC_INTERFACE_API" Template="display/fmc_interface_apis_tmp.ftl">
+        <File Category="source" Condition="sem_fmc_selected &amp; sem_fmc_format_ok" Name="fmc_interface_apis.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_fmc_base_address" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_fmc_mem_offset" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_fmc_bank_size" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_fmc_bank_id" GenericType="simple" Comment=""/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="INVALIDATECLEANCACHE" Template="cache/SCB_CleanInvalidateDCache_tmp.ftl">
+        <File Category="source" Condition="all" Name="SCB_CleanInvalidateDCache.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+	<RefConfigFile Description="" Name="INVALIDATECACHE" Template="cache/SCB_InvalidateDCache_tmp.ftl">
+		<File Category="source" Condition="all" Name="SCB_InvalidateDCache.tmp" Version="4.24.1"/>
+		<Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+	</RefConfigFile>
+
+	<RefConfigFile Description="" Name="TGFX_LICENSE" Template="license/touchgfx_license_tmp.ftl">
+        <File Category="source" Condition="all" Name="touchgfx_license.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+
+	<RefConfigFile Description="" Name="TGFX_GEN_LICENCE" Template="license/touchgfx_gen_license_tmp.ftl">
+        <File Category="source" Condition="all" Name="touchgfx_gen_license.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="LCD8BPP_CLUT" Template="display/lcd_8bpp_clut_tmp.ftl">
+        <File Category="source" Condition="sem_ltdc_selected &amp; (sem_agrb2222_selected|sem_argb2222_selected|sem_bgra2222_selected|sem_rgba2222_selected)" Name="lcd_8bpp_clut.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_pixel_format" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2D_PAINT_COMMON" Template="dma2d/dma_paint_common_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; (sem_rgb888_selected|sem_rgb565_selected|sem_argb8888_selected|sem_xrgb8888_selected)" Name="dma_paint_common.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_mcu_family" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2D_PAINT_RGB565" Template="dma2d/dma_paint_rgb565_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; (sem_rgb565_selected|sem_gpu2d_enabled)" Name="dma_paint_rgb565.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2D_PAINT_RGB888" Template="dma2d/dma_paint_rgb888_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; (sem_rgb888_selected|sem_gpu2d_enabled)" Name="dma_paint_rgb888.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2D_PAINT_ARGB8888" Template="dma2d/dma_paint_argb8888_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; (sem_argb8888_selected|sem_gpu2d_enabled)" Name="dma_paint_argb8888.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMAXRGB2222" Template="dma2d/dma_8bpp_implementation_tmp.ftl">
+        <File Category="source" Condition="sem_ltdc_selected &amp; (sem_agrb2222_selected|sem_argb2222_selected|sem_bgra2222_selected|sem_rgba2222_selected)" Name="dma_8bpp_implementation.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2DRGB565" Template="dma2d/dma_16bpp_implementation_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; sem_rgb565_selected" Name="dma_16bpp_implementation.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2DRGB888" Template="dma2d/dma_24bpp_implementation_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; sem_rgb888_selected" Name="dma_24bpp_implementation.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="DMA2DARGB8888" Template="dma2d/dma_32bpp_implementation_tmp.ftl">
+        <File Category="source" Condition="sem_dma2d_selected &amp; (sem_argb8888_selected|sem_xrgb8888_selected)" Name="dma_32bpp_implementation.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_nemap_accelerator" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+
+    <RefConfigFile Description="" Name="OSWRAPPERS_NOOS" Template="rtos/oswrappers_noos_tmp.ftl">
+        <File Category="source" Condition="oswrapper_noos" Name="oswrappers_noos.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="OSWRAPPERS_CMSIS" Template="rtos/oswrappers_cmsis_tmp.ftl">
+        <File Category="source" Condition="oswrapper_cmsis" Name="oswrappers_cmsis.tmp" Version="4.24.1"/>
+        <Argument Name="tgfx_oswrapper" GenericType="simple" Comment=""/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="OSWRAPPERS_THREADX" Template="rtos/oswrappers_threadx_tmp.ftl">
+        <File Category="source" Condition="oswrapper_threadx" Name="oswrappers_threadx.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+    <RefConfigFile Description="" Name="OSWRAPPERS_CUSTOM" Template="rtos/oswrappers_custom_tmp.ftl">
+        <File Category="source" Condition="oswrapper_custom" Name="oswrappers_custom.tmp" Version="4.24.1"/>
+    </RefConfigFile>
+</IP>

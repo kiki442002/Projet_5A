@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<CheckUpdates>
+    <Software Release="MX.6.11.0" Visited="true"/>
+    <Software Release="MX.6.11.1" Visited="true"/>
+    <Firmware Release="FW.F4.1.27.1" Visited="true"/>
+    <Firmware Release="FW.L4.1.18.1" Visited="true"/>
+    <Firmware Release="FW.F4.1.28.1" Visited="true"/>
+    <ThirdParty Release="STMicroelectronics.X-CUBE-AI.9.1.0" Visited="false"/>
+</CheckUpdates>

@@ -1,0 +1,27 @@
+config load "/Users/killian/Documents/Projet_5A/mxAI32315515309917/mxAI32315515309917.ioc"
+pack enable STMicroelectronics X-CUBE-AI 8.1.0 "Artificial Intelligence" Core
+pack enable STMicroelectronics X-CUBE-AI 8.1.0 Device Application Validation
+pack validate
+set pin PA9 USART1_TX
+set pin PA10 USART1_RX
+set mode USART1 Asynchronous
+set ip parameters USART1 BaudRate 115200
+set ip parameters USART1 WordLength WORDLENGTH_8B
+set ip parameters USART1 Parity PARITY_NONE
+set ip parameters USART1 StopBits STOPBITS_1
+set gpio parameters PA10 GPIO_PuPd GPIO_PULLUP
+AI set modes 0
+AI startuart USART1
+AI init bsp
+set bsp STMicroelectronics.X-CUBE-AI.8.1.0 "COM Port" Asynchronous USART1
+AI add model "audio_classifier" "onnx" "/Users/killian/Documents/Projet_5A/IA_embeded_audio_classifier/small_cnn_model.onnx" "" Lossless
+AI forcecopytype
+AI setboard STM32F769I-DISCO
+AI input in activation "audio_classifier" true
+AI output in activation "audio_classifier" true
+AI settings "audio_classifier" optimizetime
+AI save "audio_classifier"
+project set heapsize 0x800
+project set stacksize 0x800
+project generate
+exit
