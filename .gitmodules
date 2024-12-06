@@ -1,6 +1,8 @@
 [submodule "STM32_embeded_audio_classifier"]
 	path = STM32_embeded_audio_classifier
 	url = https://github.com/kiki442002/STM32_embeded_audio_classifier.git
+	branche = main
 [submodule "IA_embeded_audio_classifier"]
 	path = IA_embeded_audio_classifier
 	url = https://github.com/kiki442002/IA_embeded_audio_classifier.git
+	branche = main
