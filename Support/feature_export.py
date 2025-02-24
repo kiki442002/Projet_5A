@@ -146,7 +146,7 @@ mel_spectrogram = np.array(mel_data).reshape((n_frames,n_mels)).T
 # Afficher le spectrogramme de Mel
 plt.figure(figsize=(10, 4))
 plt.imshow(mel_spectrogram, aspect='auto', origin='lower', cmap='viridis', vmin=-2, vmax=5)
-plt.title('Spectrogramme de Mel sur PC')
+plt.title('Spectrogramme de Mel sur STM32')
 plt.xlabel('Frames')
 plt.ylabel('Coefficients Mel')
 plt.colorbar(format='%+2.0f dB')
